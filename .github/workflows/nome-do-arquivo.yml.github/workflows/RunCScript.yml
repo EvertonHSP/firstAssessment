@@ -1,0 +1,19 @@
+name: Run C script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Compile and run C script
+      run: |
+        gcc -o AnaliExpre AnaliExpre.c
+        ./AnaliExpre
