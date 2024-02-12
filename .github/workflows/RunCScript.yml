@@ -15,5 +15,5 @@ jobs:
 
     - name: Compile and run C script
       run: |
-        gcc -o AnaliExpre AnaliExpre.c
+        gcc -o AnaliExpre AnaliExpre.c -lm
         ./AnaliExpre
